@@ -49,7 +49,6 @@ pipeline {
 	        stage('Test') {
 	            steps {
 	                bat """ 
-						C:\Users\Shreenidhi\AppData\Local\Programs\Python\Python310\python.exe -m pip install -r test-requirements.txt
 						C:\Users\Shreenidhi\AppData\Local\Programs\Python\Python310\python.exe -m pytest > test-results.txt 
 					"""
 
