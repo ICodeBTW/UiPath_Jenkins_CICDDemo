@@ -48,13 +48,17 @@ pipeline {
 	         // Test Stages
 	        stage('Test') {
 	            steps {
-	                echo 'Testing..the workflow...'
+	                sh """ 
+						pip install -r test-requirements.txt
+						pytest > test-results.txt 
+					"""
+
 	            }
 	        }
 	
 
 	         // Deploy Stages
-	        stage('Deploy to UAT') {
+	        stage('Deploy to Orechestrator') {
 	            steps {
 	                // echo "Deploying ${BRANCH_NAME} to UAT "
 	                UiPathDeploy (
