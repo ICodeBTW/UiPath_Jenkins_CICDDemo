@@ -49,7 +49,7 @@ pipeline {
 	        stage('Test') {
 	            steps {
 	                bat """ 
-						C:/Users/Shreenidhi/AppData/Local/Programs/Python/Python310/python.exe -m pytest
+						C:/Users/Shreenidhi/AppData/Local/Programs/Python/Python310/python.exe -m pytest -vv
 					"""
 
 	            }
