@@ -48,7 +48,7 @@ pipeline {
 	         // Test Stages
 	        stage('Test') {
 	            steps {
-	                sh """ 
+	                bat """ 
 						pip install -r test-requirements.txt
 						pytest > test-results.txt 
 					"""
